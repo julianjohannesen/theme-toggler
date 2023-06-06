@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SVG Test</title>
-    <link rel="stylesheet" href="./test.css" />
+    <title>Theme Toggler</title>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
     <div style="margin: 2em">
+        <nav>
         <button class="theme-toggle" id="theme-toggle" title="Toggles light &amp; dark" aria-label="light"
             aria-live="polite">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
@@ -31,14 +32,15 @@
                 </g>
             </svg>
         </button>
-
+        </nav>
+        
         <header>
             <section class="hero">
                 <h1 class="hero-message">
-                    <div>CSS</div>
-                    <div>Catch Up</div>
+                    <div>Theme</div>
+                    <div>Toggler</div>
                 </h1>
-                <p class="under-hero">Theme Toggler experiment.</p>
+                <p class="under-hero">Experimenting with the "prefers-color-scheme" media query, window.matchMedia(), and Adam Argyle's Open Props library.</p>
                 <div class="button-list"><button class="primary">A Button!</button><button>Another Button!</button></div>
             </section>
             <picture class="promo-art">
@@ -51,8 +53,8 @@
             </picture>
         </header>
 
-        <header>
-            <h3>Scheme</h3>
+        <section>
+            <h3>Color Schemes</h3>
             <form id="theme-switcher">
                 <div>
                     <input checked type="radio" id="auto" name="theme" value="auto" />
@@ -79,7 +81,7 @@
                     <label for="choco">Choco</label>
                 </div>
             </form>
-        </header>
+        </section>
 
         <main>
             <section>
