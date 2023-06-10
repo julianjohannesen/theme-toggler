@@ -5,13 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    // Color Schemes
+    <meta name="color-scheme" value="dark light" />
+
     <title>Theme Toggler</title>
+    
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-    <div style="margin: 2em">
-        <nav>
+
+    <nav>
         <button class="theme-toggle" id="theme-toggle" title="Toggles light &amp; dark" aria-label="light"
             aria-live="polite">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
@@ -32,142 +37,89 @@
                 </g>
             </svg>
         </button>
-        </nav>
-        
-        <header>
-            <section class="hero">
-                <h1 class="hero-message">
-                    <div>Theme</div>
-                    <div>Toggler</div>
-                </h1>
-                <p class="under-hero">Experimenting with the "prefers-color-scheme" media query, window.matchMedia(), and Adam Argyle's Open Props library.</p>
-                <div class="button-list"><button class="primary">A Button!</button><button>Another Button!</button></div>
-            </section>
-            <picture class="promo-art">
-                <img 
-                    src="https://doodleipsum.com/700x700/outline?bg=3b5bdb" 
-                    height="800"
-                    width="800" 
-                    alt="a random doodle" 
-                />
-            </picture>
-        </header>
+    </nav>
 
+    <header>
+        <section class="hero">
+            <h1 class="hero-message">
+                <div>Theme</div>
+                <div>Toggler</div>
+            </h1>
+            <p class="under-hero">Experimenting with the "prefers-color-scheme" media query, window.matchMedia(), and
+                Adam Argyle's Open Props library.</p>
+            <div class="button-list"><button class="primary">A Button!</button><button>Another Button!</button></div>
+        </section>
+        <picture class="promo-art">
+            <img src="https://doodleipsum.com/700x700/outline?bg=3b5bdb" height="800" width="800"
+                alt="a random doodle" />
+        </picture>
+    </header>
+
+    <section>
+        <h3>Color Schemes</h3>
+        <form id="theme-switcher">
+            <div>
+                <input checked type="radio" id="auto" name="theme" value="auto" />
+                <label for="auto">Auto</label>
+            </div>
+            <div>
+                <input type="radio" id="light" name="theme" value="light" />
+                <label for="light">Light</label>
+            </div>
+            <div>
+                <input type="radio" id="dark" name="theme" value="dark" />
+                <label for="dark">Dark</label>
+            </div>
+            <div>
+                <input type="radio" id="dim" name="theme" value="dim" />
+                <label for="dim">Dim</label>
+            </div>
+            <div>
+                <input type="radio" id="grape" name="theme" value="grape" />
+                <label for="grape">Grape</label>
+            </div>
+            <div>
+                <input type="radio" id="choco" name="theme" value="choco" />
+                <label for="choco">Choco</label>
+            </div>
+        </form>
+    </section>
+
+    <main>
         <section>
-            <h3>Color Schemes</h3>
-            <form id="theme-switcher">
-                <div>
-                    <input checked type="radio" id="auto" name="theme" value="auto" />
-                    <label for="auto">Auto</label>
-                </div>
-                <div>
-                    <input type="radio" id="light" name="theme" value="light" />
-                    <label for="light">Light</label>
-                </div>
-                <div>
-                    <input type="radio" id="dark" name="theme" value="dark" />
-                    <label for="dark">Dark</label>
-                </div>
-                <div>
-                    <input type="radio" id="dim" name="theme" value="dim" />
-                    <label for="dim">Dim</label>
-                </div>
-                <div>
-                    <input type="radio" id="grape" name="theme" value="grape" />
-                    <label for="grape">Grape</label>
-                </div>
-                <div>
-                    <input type="radio" id="choco" name="theme" value="choco" />
-                    <label for="choco">Choco</label>
-                </div>
-            </form>
+            <div class="surface-samples">
+                <div class="surface-1 rad-shadow">1</div>
+                <div class="surface-2 rad-shadow">2</div>
+                <div class="surface-3 rad-shadow">3</div>
+                <div class="surface-4 rad-shadow">4</div>
+            </div>
         </section>
 
-        <main>
-            <section>
-                <div class="surface-samples">
-                    <div class="surface-1 rad-shadow">1</div>
-                    <div class="surface-2 rad-shadow">2</div>
-                    <div class="surface-3 rad-shadow">3</div>
-                    <div class="surface-4 rad-shadow">4</div>
-                </div>
-            </section>
+        <section>
+            <div class="text-samples">
+                <h1 class="text-1">
+                    <span class="swatch brand rad-shadow"></span>
+                    Brand
+                </h1>
+                <h1 class="text-1">
+                    <span class="swatch text-1 rad-shadow"></span>
+                    Text Color 1
+                </h1>
+                <h1 class="text-2">
+                    <span class="swatch text-2 rad-shadow"></span>
+                    Text Color 2
+                </h1>
+                <br />
+                <p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+    </main>
 
-            <section>
-                <div class="text-samples">
-                    <h1 class="text-1">
-                        <span class="swatch brand rad-shadow"></span>
-                        Brand
-                    </h1>
-                    <h1 class="text-1">
-                        <span class="swatch text-1 rad-shadow"></span>
-                        Text Color 1
-                    </h1>
-                    <h1 class="text-2">
-                        <span class="swatch text-2 rad-shadow"></span>
-                        Text Color 2
-                    </h1>
-                    <br />
-                    <p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p class="text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </section>
-        </main>
-    </div>
-    <script>
-        const themeToggler = document.querySelector("#theme-toggle");
-        const prefersColorSchemeMQL = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        );
-        console.log("The MQL at load time: ", prefersColorSchemeMQL);
+    <script src="./theme-toggler.js"></script>
 
-        const getColorPreference = () => {
-            if (localStorage.getItem("theme-preference")) {
-                console.log("Getting locally stored theme preference");
-                return localStorage.getItem("theme-preference");
-            } else {
-                console.log("Returning theme-preference.");
-                return prefersColorSchemeMQL.matches ? "dark" : "light";
-            }
-        };
-
-        const setPreference = () => {
-            console.log("Setting local theme preference");
-            localStorage.setItem("theme-preference", theme.value);
-            console.log("Reflecting theme preference");
-            reflectPreference();
-        };
-
-        const reflectPreference = () => {
-            document.firstElementChild.setAttribute("data-theme", theme.value);
-            themeToggler?.setAttribute("aria-label", theme.value);
-        };
-
-        const theme = { value: getColorPreference() };
-
-        reflectPreference();
-
-        window.onload = () => {
-            console.log("Calling reflect preference on window load");
-            reflectPreference();
-
-            themeToggler?.addEventListener("click", (e) => {
-                theme.value = theme.value === "light" ? "dark" : "light";
-                setPreference();
-            });
-        };
-
-        prefersColorSchemeMQL.addEventListener(
-            "change",
-            ({ matches: isDark }) => {
-                console.log(`Dark mode is ${isDark ? "🌒 on" : "☀️ off"}.`);
-                theme.value = isDark ? "dark" : "light";
-                setPreference();
-            }
-        );
-    </script>
 </body>
 
 </html>

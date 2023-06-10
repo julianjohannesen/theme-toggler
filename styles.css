@@ -5,7 +5,7 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 @import "https://unpkg.com/open-props/buttons.min.css";
 
-/* just dark or light themes */
+/* Just dark or light themes */
 @import "https://unpkg.com/open-props/normalize.dark.min.css";
 @import "https://unpkg.com/open-props/buttons.dark.min.css";
 @import "https://unpkg.com/open-props/normalize.light.min.css";
@@ -16,6 +16,8 @@
 @import "https://unpkg.com/open-props/purple-hsl.min.css";
 @import "https://unpkg.com/open-props/choco-hsl.min.css";
 
+/* Color Themes */
+/* Straight from Adam's Open Props Color Themes example */
 html {
     /* light */
     --brand-light: var(--orange-6);
@@ -178,7 +180,7 @@ html {
     --surface-shadow: var(--surface-shadow-choco);
     --shadow-strength: var(--shadow-strength-choco);
   }
-  
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -208,7 +210,7 @@ html {
   main {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     place-content: center;
     /* align-content: center;
     justify-content: center; */
@@ -230,10 +232,10 @@ html {
     line-height: var(--font-lineheight-3);
   }
   
-  header {
+  /* header {
     display: inline-grid;
     gap: var(--size-3);
-  }
+  } */
   
   form {
     display: flex;
@@ -339,10 +341,8 @@ html {
   }
 
   /* Hero area */
-  body {
-    display: flex;
-  }
-  
+  /* Straight from Adam's Hero area example */
+
   header {
     display: grid;
     align-items: center;
@@ -408,3 +408,31 @@ html {
     block-size: 100%;
     object-fit: cover;
   }
+
+  /* Theme Toggle */
+
+.theme-toggle {
+  background: none;
+}
+
+/* Light and Dark Themed Buttons */
+/* Straight from Open Props site */
+
+:where([data-theme="light"],.light,.light-theme) :where(button) {
+  --_highlight: var(--_highlight-light);
+  --_bg: var(--_bg-light);
+  --_ink-shadow: var(--_ink-shadow-light);
+}
+
+:where([data-theme="dark"],.dark,.dark-theme) :where(button) {
+  --_highlight: var(--_highlight-dark);
+  --_bg: var(--_bg-dark);
+  --_ink-shadow: var(--_ink-shadow-dark);
+}
+
+:where(input,button,textarea,select) {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
